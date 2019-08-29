@@ -69,6 +69,11 @@ extension ReceiptItem {
         } else {
             self.isInIntroOfferPeriod = false
         }
+        if let isAutoRenew = receiptInfo["auto_renew_status"] as? String {
+            self.isAutoRenew = Bool(isAutoRenew) ?? false
+        } else {
+            self.isAutoRenew = false
+        }
     }
 
     private static func parseDate(from receiptInfo: ReceiptInfo, key: String) -> Date? {

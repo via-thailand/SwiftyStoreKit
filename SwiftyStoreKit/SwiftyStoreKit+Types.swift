@@ -141,6 +141,8 @@ public struct ReceiptItem {
     public let isTrialPeriod: Bool
     
     public let isInIntroOfferPeriod: Bool
+    
+    public let isAutoRenew: Bool
 }
 
 // Error when managing receipt
